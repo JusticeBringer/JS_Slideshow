@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>JS Slideshow</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	
+	<link rel='stylesheet' type='text/css' media='screen' href='./css/style.css'>	
+	<link rel='stylesheet' type='text/css' media='screen' href='./css/fonts.css'>
+
+	
+	<link rel='stylesheet' type='text/css' media='screen' href='./css/max425.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='./css/min426.css'>
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap">
+
+	<script src='./js/index.js'></script>
+
+</head>
+
+<body>
+	
+	<div id="overlay">
+		<div id="popup"> <h2 class="forDespreh2"> Site made for rtCamp Sample Challenge for Assignment </h2>
+
+			<h2 class="forDespreh2"> Submission Guidelines </h2>
+			<ol class="forDespre">
+				<li>
+					Source Code Hosting ➞ You must use Github (recommended) or Gitlab for source code hosting.
+				</li>
+				<li>
+					Web Hosting for demo ➞ As your app work doesn’t have any server-side component development — besides using data from WordPress sites which are already publicly hosted — you should be able to use Github pages for hosting. You can even try Vercel or any other hosting of your choice.
+				</li>
+			</ol>  
+		
+			<p class="forDesprep"> Improvements can be let <a class="lessAici" onclick="openMail()"> here </a> </p>
+
+			<a href="javascript:myBlurFunction(0);" class="hide-button">Close</a>
+		</div>
+	</div>
+	<div id="allContent">
+		<header>
+			<div id="header-wrap">
+				<div class="row barLooks">
+					<div class="fit10 fltLeft"><p/></div>
+					<div class="fit80 fltLeft">
+						<nav>
+							<ul class="menu" id="">
+								<li>  <a href="#" class="big-name"> JS Slideshow </a> </li>
+							</ul>
+						</nav>
+					</div>
+					<div class="fit10 fltLeft">
+						<p/>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div>
+			<div class="row">
+				<div class="fit5 fltLeft"><p/></div>
+				<div class="fit30 fltLeft"><p/></div>
+				<div class="fit30 fltLeft">
+					<h1 class="text-banner"> Slideshow </h1>
+					
+					<div class="slides-container">
+						<div class="post">
+							<h2 class="post-title">Post title </h2>
+							<figure>
+								<img> 
+								<figcaption> Describe </figcaption>
+							</figure>
+							<p class="post-date"> Post date </p>
+						</div>
+					</div>
+
+				</div>
+				<div class="fit30 fltLeft"><p/></div>
+				<div class="fit5 fltLeft"><p/></div>
+			</div>
+		</div>
+
+		<div id="page-container">
+			<div id="content-wrap">
+			</div>
+			
+		</div>
+	</div>
+	<footer id="footer">
+		<div class="footerLooks">
+			<div class="fit10 fltLeft"><p/></div>
+			<div class="fit80 fltLeft">
+				<nav>
+					<ul class="menu" id="">
+						<li>  <a href="#" class="big-name"> JS slideshow</a> </li>
+						<li class="fltRight"> <a href="#" onclick="myBlurFunction(1)"> About </a> </li>
+					</ul>
+				</nav>
+			</div>
+			<div class="fit10 fltLeft">
+				<p/>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
