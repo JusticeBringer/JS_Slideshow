@@ -12,6 +12,7 @@
 	
 	<link rel='stylesheet' type='text/css' media='screen' href='./css/max425.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='./css/min426.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='./css/min1440.css'>
 	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap">
 
@@ -64,21 +65,41 @@
 				<div class="fit30 fltLeft"><p/></div>
 				<div class="fit30 fltLeft">
 					<h1 class="text-banner"> Slideshow </h1>
+
+					<label for="fname">Enter site for posts:</label>
+					<input type="text" id="fname" name="fname"><br><br>
+					<button class="difBut" id="" onclick=""> Get posts </button>
 					
 					<div class="slides-container">
 						<div class="post">
-							<h2 class="post-title">Post title </h2>
+							<a class="post-title" id="post-title">Post title </a>
 							<figure>
-								<img> 
-								<figcaption> Describe </figcaption>
+								<a id="post-image-link-original"><img id="post-image"></a> 
 							</figure>
-							<p class="post-date"> Post date </p>
+							<p class="post-content" id="post-content">Post Content</p>
+							<a class="readMore" id="read-more"> </a>
+							<p class="post-date" id="post-date"> Post date </p>
 						</div>
 					</div>
 
 				</div>
 				<div class="fit30 fltLeft"><p/></div>
 				<div class="fit5 fltLeft"><p/></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="fit5 fltLeft"><p/></div>
+			<div class="fit30 fltLeft"><p/></div>
+			<div class="fit30 fltLeft">
+				
+				<div id="hide-content">
+
+					<div id="myProgress">
+						<div id="myBar"></div>
+					</div>
+					
+					<p> Loading ...</p>
+				</div>
 			</div>
 		</div>
 

@@ -69,20 +69,81 @@ async function extractPost(data){
 		
 		console.log("Now");
 		console.log(DATAPOSTS);
+
+		var elem = document.getElementById("hide-content");
+		elem.style.display = "none";
 		
 	}, 3000);
 
 	
 }
 
-function displayPosts(){
+var currentSlide = 0;
+var autoSlide = setInterval(frame, 5000, currentSlide);
+function frame(){
+	if((currentSlide + 1) === DATAPOSTS.length){
+		currentSlide = 0;
+	}
+	else{
+		currentSlide += 1;
+	}
 
+	displayPosts();
 }
 
+function trimContent(content){
+	var newText = "";
+	for(let i = 0; i < content.length && i < 300; i++){
+		newText += content[i];
+	}
+
+	newText += "... ";
+
+	return newText;
+}
+
+function displayPosts(){
+	var pTitle = document.getElementById("post-title");
+	var pImage = document.getElementById("post-image");
+	var pImageOriginalLink = document.getElementById("post-image-link-original");
+	var pContent = document.getElementById("post-content");
+	var pDate = document.getElementById("post-date");
+	var readMore = document.getElementById("read-more");
+	
+
+	pTitle.innerText = DATAPOSTS[currentSlide].title;
+	pImage.src = DATAPOSTS[currentSlide].imageLink;
+	pContent.innerHTML = DATAPOSTS[currentSlide].content;
+	pContent.innerText = trimContent(pContent.innerText);
+	pDate.innerText = "Article written on " + DATAPOSTS[currentSlide].date;
+
+	pTitle.setAttribute("href", DATAPOSTS[currentSlide].link);
+	pImageOriginalLink.setAttribute("href", DATAPOSTS[currentSlide].link);
+
+	pImage.classList.add("post-image");
+
+	readMore.setAttribute("href", DATAPOSTS[currentSlide].link);
+	readMore.innerText = "Read more";
+}
+
+function move() {
+	var elem = document.getElementById("myBar");   
+	var width = 0;
+	var id = setInterval(frame, 40);
+	function frame() {
+	  if (width == 100) {
+		clearInterval(id);
+	  } else {
+		width++; 
+		elem.style.width = width + '%'; 
+	  }
+	}
+  }
+
 window.onload = function(){
+	move();
 	getPosts();
 
 	setTimeout(function(){
-		displayPosts();
-	}, 3010);
+	}, 4010);
 }

@@ -1,0 +1,28 @@
+@media (min-width: 1920px) {
+	.barLooks{
+		margin: 0 0 0.5vw 0;
+		width: 100%;
+	}
+	.big-name{
+		font-size: 2.5vw !important;
+		line-height: 5vh;
+	}
+	.menu{
+		padding: 0;
+	}
+	.btn-magic {
+		padding: 0.2vw;
+		margin: 0.2vw !important;
+		font-size: 2vw !important;
+	}
+	li.fltRight{
+		margin-right: 4vw;
+		line-height: 5vh;
+	}
+
+	/* --- Menu until here --- */
+
+	.post-title{
+		font-size: 3vw;
+	}
+}

@@ -1,0 +1,44 @@
+@media (min-width: 1440px) {
+	.barLooks{
+		margin: 0 0 0.5vw 0;
+		width: 100%;
+	}
+	.big-name{
+		font-size: 2.5vw !important;
+		line-height: 5vh;
+	}
+	.menu{
+		padding: 0;
+	}
+	.btn-magic {
+		padding: 0.2vw;
+		margin: 0.2vw !important;
+		font-size: 2vw !important;
+	}
+	li.fltRight{
+		margin-right: 4vw;
+		line-height: 5vh;
+	}
+
+	/* --- Menu until here --- */
+
+	.text-banner{
+		font-size: 3vw;
+	}
+
+	.post-title{
+		font-size: 1.7vw;
+	}
+	.post-image{
+		width: 100%;
+		height: 100%;
+	}
+
+	.difBut{
+		font-size: 1.3vw;
+		margin: 0.2vw 0 1vw 0;
+		box-sizing: border-box;
+		padding: 0.3vw;
+		display: inline;
+	}
+}
