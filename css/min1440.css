@@ -4,7 +4,7 @@
 		width: 100%;
 	}
 	.big-name{
-		font-size: 2.5vw !important;
+		font-size: 2.5vw;
 		line-height: 5vh;
 	}
 	.menu{
@@ -12,8 +12,8 @@
 	}
 	.btn-magic {
 		padding: 0.2vw;
-		margin: 0.2vw !important;
-		font-size: 2vw !important;
+		margin: 0.2vw;
+		font-size: 2vw;
 	}
 	li.fltRight{
 		margin-right: 4vw;
@@ -23,18 +23,23 @@
 	/* --- Menu until here --- */
 
 	.text-banner{
-		font-size: 3vw;
+		font-size: 1vw;
+	}
+	label{
+		font-size: 2vw;
 	}
 
 	.post-title{
-		font-size: 1.7vw;
+		font-size: 2.3vw;
 	}
 	.post-image{
 		width: 100%;
 		height: 100%;
 		margin-left: 0.45vw;
 	}
-
+	.post-content{
+		font-size: 2vw;
+	}
 	.difBut{
 		font-size: 1.3vw;
 		margin: 0.2vw 0 1vw 0;
@@ -64,5 +69,29 @@
 	#popupTwo > ol > li:nth-child(3) > ul > li{
 		font-size: 0.8vw;
 		float: none;
+	}
+	.fit30{
+		width: 30%;
+		padding: 0 3vw 0 3vw;
+	}
+	.fit5{
+		width: 5%;
+		padding: 0 3vw 0 3vw;
+	}
+
+	.post-content{
+		font-size: 2vw;
+	}
+
+	.readMore{
+		font-size: 2vw
+	}
+
+	.post-date{
+		font-size: 2vw;
+	}
+
+	.text-banner{
+		font-size: 2vw;
 	}
 }

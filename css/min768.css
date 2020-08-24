@@ -1,4 +1,4 @@
-@media (max-width: 425px) {
+@media (min-width: 768px) {
 	.barLooks{
 		margin: 0 0 0.5vw 0;
 		width: 100%;
@@ -44,6 +44,7 @@
 		height: 100%;
 		margin-left: 0.45vw;
 		margin-bottom: 2vw;
+		padding: 0 3vw 0 3vw;
 	}
 
 	.post-content{
@@ -99,11 +100,11 @@
 	
 	.forMobile{
 		float: left;
-		top: 30%;
+		top: 50%;
 	}
 	.forMobileTwo{
 		float: right;
-		top: 35%;
+		top: 70%;
 	}
 
 	#popupTwo > ol > li:nth-child(3) > ul > li{
@@ -113,61 +114,61 @@
 
 	#popup {
 		width: 70%;
-		height: 55%;
+		height: 45%;
 		padding: 1vw;
 	}
 	
 	.hide-button{
-		font-size: 4vw;
+		font-size: 2vw;
 		margin-left: 35%;
 		padding: 1vw;
 	}
 	
 	.forDespre{
-		font-size: 4vw;
+		font-size: 3vw;
 	}
 	
 	ol.forDespre > li{
-		font-size: 4vw;
+		font-size: 2vw;
 		float: none;
 	}
 	
 	.lessAici{
-		font-size: 4vw;
+		font-size: 1vw;
 		text-decoration: underline;
 	}
 	
 	.forDespreh2{
-		font-size: 4vw;
+		font-size: 2vw;
 	}
 	
 	.forDesprep{
-		font-size: 3.5vw;
+		font-size: 2vw;
 	}
 	#allContent > div.row > div.fit15.fltLeft > div:nth-child(2) > label{
-		font-size: 3.2vw;
+		font-size: 2vw;
 		margin: 0 0 0 1vh;
 		letter-spacing: 0.2vw;
 	}
 	#popupTwo > ol > li:nth-child(3) > p{
-		font-size: 4vw;
+		font-size: 2vw;
 	}
 	#popupTwo > ol > li:nth-child(3) > ul > li{
-		font-size: 3.5vw;
+		font-size: 2.5vw;
 	}
 
 	#popupTwo {
 		width: 75%;
-		height: 65%;
+		height: 55%;
 		padding: 1vw;
 	}
 	#hide-content > p{
-		font-size: 4vw;
+		font-size: 2vw;
 	}
 	#allContent > div:nth-child(2) > div > div:nth-child(3) > div.slides-container > div > div{
 		padding-top: 5vw;
 	}
 	#footer > div > div.fit80.fltLeft > nav > ul > li.fltRight > a{
-		font-size: 3vw;
+		font-size: 2vw;
 	}
 }

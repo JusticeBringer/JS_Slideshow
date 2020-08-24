@@ -1,0 +1,173 @@
+@media (min-width: 426px) {
+	.barLooks{
+		margin: 0 0 0.5vw 0;
+		width: 100%;
+	}
+	.big-name{
+		font-size: 3.5vw;
+		line-height: 5vh;
+	}
+	.menu{
+		padding: 0;
+	}
+	.btn-magic {
+		padding: 0.2vw;
+		margin: 0.2vw;
+		font-size: 2vw;
+	}
+	li.fltRight{
+		margin-right: 4vw;
+		line-height: 5vh;
+	}
+
+	/* --- Menu until here --- */
+
+	.fit30{
+		width: 90%;
+		padding: 0 3vw 0 3vw;
+	}
+	.fit5{
+		width: 5%;
+		padding: 0 3vw 0 3vw;
+	}
+	.borderDiv {
+		border-bottom: 2px solid black;
+		margin-bottom: 3vw;
+	}
+
+	.post-title{
+		font-size: 3.5vw;
+		margin-bottom: 2vw;
+	}
+	.post-image{
+		width: 100%;
+		height: 100%;
+		margin-left: 0.45vw;
+		margin-bottom: 2vw;
+	}
+
+	.post-content{
+		font-size: 3vw;
+	}
+
+	.readMore{
+		font-size: 4vw
+	}
+
+	.post-date{
+		font-size: 3vw;
+	}
+
+	.text-banner{
+		font-size: 3vw;
+	}
+	.slideBut{
+		font-size: 3vw;
+		top: 50%;
+		position: absolute;
+	}	
+
+	label{
+		font-size: 4vw;
+	}
+	input[type="text" i] {
+		margin-top: 2vw;
+		padding: 0.2vw;
+	}
+
+	.difBut{
+		font-size: 3vw;
+		margin: 0.2vw 0 1vw 0;
+		padding: 0.3vw;
+	}
+	.infoBut{
+		font-size: 3vw;
+		margin: 0.2vw 0 1vw 0;
+		padding: 0.2vw;
+	}
+	.blockSlide{
+		height: 20%;
+	}
+	#popupTwo > ol > li:nth-child(3) > ul > li{
+		font-size: 0.8vw;
+		float: none;
+	}
+	a#post-image-link-original{
+		width: 100%;
+		height: 100%;
+	}
+	
+	.forMobile{
+		float: left;
+		top: 40%;
+	}
+	.forMobileTwo{
+		float: right;
+		top: 45%;
+	}
+
+	#popupTwo > ol > li:nth-child(3) > ul > li{
+		font-size: 0.8vw;
+		float: none;
+	}
+
+	#popup {
+		width: 70%;
+		height: 55%;
+		padding: 1vw;
+	}
+	
+	.hide-button{
+		font-size: 4vw;
+		margin-left: 35%;
+		padding: 1vw;
+	}
+	
+	.forDespre{
+		font-size: 3vw;
+	}
+	
+	ol.forDespre > li{
+		font-size: 3vw;
+		float: none;
+	}
+	
+	.lessAici{
+		font-size: 2vw;
+		text-decoration: underline;
+	}
+	
+	.forDespreh2{
+		font-size: 3vw;
+	}
+	
+	.forDesprep{
+		font-size: 2.5vw;
+	}
+	#allContent > div.row > div.fit15.fltLeft > div:nth-child(2) > label{
+		font-size: 3.2vw;
+		margin: 0 0 0 1vh;
+		letter-spacing: 0.2vw;
+	}
+	#popupTwo > ol > li:nth-child(3) > p{
+		font-size: 4vw;
+	}
+	#popupTwo > ol > li:nth-child(3) > ul > li{
+		font-size: 3.5vw;
+	}
+
+	#popupTwo {
+		width: 75%;
+		height: 65%;
+		padding: 1vw;
+	}
+	#hide-content > p{
+		font-size: 4vw;
+	}
+	#allContent > div:nth-child(2) > div > div:nth-child(3) > div.slides-container > div > div{
+		padding-top: 5vw;
+	}
+	#footer > div > div.fit80.fltLeft > nav > ul > li.fltRight > a{
+		font-size: 3vw;
+	}
+}

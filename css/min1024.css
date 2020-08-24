@@ -1,4 +1,4 @@
-@media (max-width: 425px) {
+@media (min-width: 1024px) {
 	.barLooks{
 		margin: 0 0 0.5vw 0;
 		width: 100%;
@@ -22,14 +22,6 @@
 
 	/* --- Menu until here --- */
 
-	.fit30{
-		width: 90%;
-		padding: 0 3vw 0 3vw;
-	}
-	.fit5{
-		width: 5%;
-		padding: 0 3vw 0 3vw;
-	}
 	.borderDiv {
 		border-bottom: 2px solid black;
 		margin-bottom: 3vw;
@@ -99,11 +91,11 @@
 	
 	.forMobile{
 		float: left;
-		top: 30%;
+		top: 40%;
 	}
 	.forMobileTwo{
 		float: right;
-		top: 35%;
+		top: 45%;
 	}
 
 	#popupTwo > ol > li:nth-child(3) > ul > li{
@@ -124,25 +116,25 @@
 	}
 	
 	.forDespre{
-		font-size: 4vw;
+		font-size: 3vw;
 	}
 	
 	ol.forDespre > li{
-		font-size: 4vw;
+		font-size: 3vw;
 		float: none;
 	}
 	
 	.lessAici{
-		font-size: 4vw;
+		font-size: 2vw;
 		text-decoration: underline;
 	}
 	
 	.forDespreh2{
-		font-size: 4vw;
+		font-size: 3vw;
 	}
 	
 	.forDesprep{
-		font-size: 3.5vw;
+		font-size: 2.5vw;
 	}
 	#allContent > div.row > div.fit15.fltLeft > div:nth-child(2) > label{
 		font-size: 3.2vw;
