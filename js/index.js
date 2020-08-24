@@ -12,6 +12,20 @@ myBlurFunction = function(state) {
     }
 };
 
+myBlurFunctionTwo = function(state) {
+	/* state can be 1 or 0 */
+	var containerElement = document.getElementById('allContent');
+	var overlayEle = document.getElementById('overlayTwo');
+
+	if (state) {
+		overlayEle.style.display = 'block';
+		containerElement.setAttribute('class', 'blur');
+	} else {
+		overlayEle.style.display = 'none';
+		containerElement.setAttribute('class', null);
+	}
+};
+
 function openMail(){
 	window.location.href = "mailto:gabriel.univ208@gmail.com";
 }
@@ -73,13 +87,14 @@ async function extractPost(data){
 		var elem = document.getElementById("hide-content");
 		elem.style.display = "none";
 		
-	}, 3000);
+	}, 1000);
 
 	
 }
 
 var currentSlide = 0;
-var autoSlide = setInterval(frame, 5000, currentSlide);
+var timerSlide = 5000;
+var autoSlide = setInterval(frame, timerSlide, currentSlide);
 function frame(){
 	if((currentSlide + 1) === DATAPOSTS.length){
 		currentSlide = 0;
@@ -126,10 +141,42 @@ function displayPosts(){
 	readMore.innerText = "Read more";
 }
 
+function prevSlide(){
+	if((currentSlide - 1) < 0){
+		currentSlide = DATAPOSTS.length - 1;
+	}
+	else{
+		currentSlide -= 1;
+	}
+
+	timerSlide += 5000;
+
+	if(timerSlide > 19000)
+		timerSlide = 5000;
+
+	displayPosts();
+}
+
+function nextSlide(){
+	if((currentSlide + 1) === DATAPOSTS.length){
+		currentSlide = 0;
+	}
+	else{
+		currentSlide += 1;
+	}
+
+	timerSlide += 5000;
+
+	if(timerSlide > 19000)
+		timerSlide = 5000;
+
+	displayPosts();
+}
+
 function move() {
 	var elem = document.getElementById("myBar");   
 	var width = 0;
-	var id = setInterval(frame, 40);
+	var id = setInterval(frame, 30);
 	function frame() {
 	  if (width == 100) {
 		clearInterval(id);
@@ -138,12 +185,25 @@ function move() {
 		elem.style.width = width + '%'; 
 	  }
 	}
-  }
+}
+
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+	e = e || window.event;
+
+    if (e.keyCode == '37') {
+	   // left arrow
+	   prevSlide();
+    }
+    else if (e.keyCode == '39') {
+	   // right arrow
+	   nextSlide();
+    }
+}
 
 window.onload = function(){
 	move();
 	getPosts();
-
-	setTimeout(function(){
-	}, 4010);
 }

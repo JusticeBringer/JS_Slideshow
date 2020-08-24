@@ -40,6 +40,39 @@
 			<a href="javascript:myBlurFunction(0);" class="hide-button">Close</a>
 		</div>
 	</div>
+
+	<div id="overlayTwo">
+		<div id="popupTwo"> <h2 class="forDespreh2"> Instructions using ”Get posts” button </h2>
+
+			<!-- <h2 class="forDespreh2"> Submission Guidelines </h2> -->
+			<ol class="forDespre">
+				<li>
+					URL must be something like  "https://website.com/posts";
+				</li>
+				<li>
+					Posts must be in JSON format
+				</li>
+				<li>
+					<p>Posts must have this structure </p>
+						<ul>
+							<li>Post</li>
+							<li>| id</li>
+							<li>| title.rendered</li>
+							<li>| content.rendered</li>
+							<li>| date</li>
+							<li>| _links.self[0].href</li>
+							<li>| jetpack_featured_media_url</li>
+						</ul>
+						
+				<p>These are necessary for getting post id, post title, post content, post date, post original link, post image </p>
+				</li>
+				
+			</ol>  
+
+			<a href="javascript:myBlurFunctionTwo(0);" class="hide-button">Close</a>
+		</div>
+	</div>
+
 	<div id="allContent">
 		<header>
 			<div id="header-wrap">
@@ -64,18 +97,33 @@
 				<div class="fit5 fltLeft"><p/></div>
 				<div class="fit30 fltLeft"><p/></div>
 				<div class="fit30 fltLeft">
-					<h1 class="text-banner"> Slideshow </h1>
-
-					<label for="fname">Enter site for posts:</label>
-					<input type="text" id="fname" name="fname"><br><br>
-					<button class="difBut" id="" onclick=""> Get posts </button>
+					<h1 class="text-banner">  </h1>
+					
+					<div class="borderDiv">
+						<label for="fname">Enter site for posts:</label>
+						<input type="text" id="fname" name="fname"><br><br>
+						<button class="difBut" id="" onclick=""> Get posts </button>
+						<button class="infoBut" id="infoBut" onclick="myBlurFunctionTwo(1)">Info</button>
+					</div>
 					
 					<div class="slides-container">
 						<div class="post">
 							<a class="post-title" id="post-title">Post title </a>
-							<figure>
-								<a id="post-image-link-original"><img id="post-image"></a> 
-							</figure>
+							
+							<div class="row">
+								<div class="fit5 fltLeft blockSlide">
+									<button class="slideBut" onclick="prevSlide()"> ❮ </button>
+								</div>
+								<div class="fit90 fltLeft">
+									<figure>
+										<a id="post-image-link-original"><img id="post-image" src="block.png"></a> 
+									</figure>
+								</div>
+								<div class="fit5 fltLeft">
+									<button class="slideBut" onclick="nextSlide()"> ❯ </button>
+								</div>
+							</div>
+							
 							<p class="post-content" id="post-content">Post Content</p>
 							<a class="readMore" id="read-more"> </a>
 							<p class="post-date" id="post-date"> Post date </p>
