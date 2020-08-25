@@ -1,5 +1,5 @@
 # JS_Slideshow
-JS Slideshow for WordPress Posts
+JS Slideshow for WordPress Posts: [live website](https://justicebringer.github.io/JS_Slideshow/)
 
 Requirements can also be seen **[here](https://rtcamp.com/assignments/front-end-engineer/)**
 
