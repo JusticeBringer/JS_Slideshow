@@ -26,11 +26,18 @@ myBlurFunctionTwo = function(state) {
 	}
 };
 
-function openMail(){
-	window.location.href = "mailto:gabriel.univ208@gmail.com";
+function clearContent(){
+	var pTitle = document.getElementById("post-title");
+	var pImage = document.getElementById("post-image");
+	var pContent = document.getElementById("post-content");
+	var pDate = document.getElementById("post-date");
+	var readMore = document.getElementById("read-more");
+	
+
+	pTitle.innerText = pImage.src = pContent.innerHTML = pContent.innerText = pDate.innerText = readMore.innerText = "";
 }
 
-async function getPosts(){
+async function getPosts(myUrl="https://wptavern.com/wp-json/wp/v2/posts"){
 	var xhr = new XMLHttpRequest();
 	// we defined the xhr
 	var data;
@@ -44,17 +51,35 @@ async function getPosts(){
 			extractPost(data);
 		}
 	};
-
-	var myUrl = "https://wptavern.com/wp-json/wp/v2/posts";
 	
 	xhr.open('GET', myUrl, true);
 	xhr.send(data);
 }
 
-var DATAPOSTS = []
+var DATAPOSTS = [];
+
+function compare(a, b){
+ // Use toUpperCase() to ignore character casing
+  const bandA = a.date.toUpperCase();
+  const bandB = b.date.toUpperCase();
+
+  let comparison = 0;
+  if (bandA > bandB) {
+    comparison = 1;
+  } else if (bandA < bandB) {
+    comparison = -1;
+  }
+  //invert return value by multiplying by -1
+  return comparison * -1;
+}
+
+function sortDescending(){
+	DATAPOSTS = DATAPOSTS.sort(compare);
+}
 
 async function extractPost(data){
 	var posts = data;
+	DATAPOSTS = [];
 
 	setTimeout(function(){
 		console.log(posts);
@@ -75,7 +100,7 @@ async function extractPost(data){
 			obj.title = posts[i].title.rendered;
 			obj.content = posts[i].content.rendered;
 			obj.date = posts[i].date;
-			obj.link = posts[i]._links.self[0].href;
+			obj.link = posts[i].link;
 			obj.imageLink = posts[i].jetpack_featured_media_url;
 
 			DATAPOSTS.push(obj);			
@@ -84,18 +109,18 @@ async function extractPost(data){
 		console.log("Now");
 		console.log(DATAPOSTS);
 
-		var elem = document.getElementById("hide-content");
-		elem.style.display = "none";
+		sortDescending();
+
+		elem = document.getElementById("thePost");
+		elem.style.marginBottom = "7vw";
 		
 	}, 1000);
-
-	
 }
 
 var currentSlide = 0;
 var timerSlide = 5000;
-var autoSlide = setInterval(frame, timerSlide, currentSlide);
-function frame(){
+var autoSlide = setInterval(frameInterval, timerSlide, currentSlide);
+function frameInterval(){
 	if((currentSlide + 1) === DATAPOSTS.length){
 		currentSlide = 0;
 	}
@@ -174,12 +199,16 @@ function nextSlide(){
 }
 
 function move() {
-	var elem = document.getElementById("myBar");   
+	var elem = document.getElementById("myBar");
+	var wrapper = document.getElementById("hide-content");
+	wrapper.style.display = "block";
+	
 	var width = 0;
-	var id = setInterval(frame, 30);
-	function frame() {
+	var id = setInterval(frameLoad, 30);
+	function frameLoad() {
 	  if (width == 100) {
 		clearInterval(id);
+		wrapper.style.display = "none";
 	  } else {
 		width++; 
 		elem.style.width = width + '%'; 
@@ -203,7 +232,66 @@ function checkKey(e) {
     }
 }
 
+function refreshContent(){
+	clearContent();
+	move();
+
+	currentSlide = 0;
+	timerSlide = 5000;
+	clearInterval(autoSlide);
+	autoSlide = setInterval(frameInterval, timerSlide, currentSlide);
+
+	var inpLink = document.getElementById("postSiteLink").value;
+	getPosts(inpLink);
+}
+
 window.onload = function(){
 	move();
 	getPosts();
+
+	document.addEventListener('touchstart', handleTouchStart, false);        
+	document.addEventListener('touchmove', handleTouchMove, false);
+
+	var xDown = null;                                                        
+	var yDown = null;
+
+	function getTouches(evt) {
+		return evt.touches ||             // browser API
+			evt.originalEvent.touches; // jQuery
+	}                                                     
+
+	function handleTouchStart(evt) {
+		const firstTouch = getTouches(evt)[0];                                      
+		xDown = firstTouch.clientX;                                      
+		yDown = firstTouch.clientY;                                      
+	};                                                
+
+	function handleTouchMove(evt) {
+		if ( ! xDown || ! yDown ) {
+			return;
+		}
+
+		var xUp = evt.touches[0].clientX;                                    
+		var yUp = evt.touches[0].clientY;
+
+		var xDiff = xDown - xUp;
+		var yDiff = yDown - yUp;
+
+		if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+			if ( xDiff > 0 ) {
+				prevSlide();
+			} else {
+				nextSlide();
+			}                       
+		} else {
+			if ( yDiff > 0 ) {
+				/* up swipe */ 
+			} else { 
+				/* down swipe */
+			}                                                                 
+		}
+		/* reset values */
+		xDown = null;
+		yDown = null;                                             
+	};
 }

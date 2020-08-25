@@ -26,7 +26,7 @@
 <body>
 	
 	<div id="overlay">
-		<div id="popup"> <h2 class="forDespreh2"> Site made for rtCamp Sample Challenge for Assignment </h2>
+		<div id="popup"> <h2 class="forDespreh2"> Site made for <a class="lessAici" href="https://rtcamp.com/assignments/front-end-engineer/"> rtCamp Sample Challenge for Assignment </a> </h2>
 
 			<h2 class="forDespreh2"> Submission Guidelines </h2>
 			<ol class="forDespre">
@@ -38,7 +38,7 @@
 				</li>
 			</ol>  
 		
-			<p class="forDesprep"> Improvements can be let <a class="lessAici" onclick="openMail()"> here </a> </p>
+			<p class="forDesprep"> Improvements can be let <a class="lessAici" href="https://github.com/JusticeBringer/JS_Slideshow/issues"> here </a> </p>
 
 			<a href="javascript:myBlurFunction(0);" class="hide-button">Close</a>
 		</div>
@@ -63,7 +63,7 @@
 							<li>| title.rendered</li>
 							<li>| content.rendered</li>
 							<li>| date</li>
-							<li>| _links.self[0].href</li>
+							<li>| link</li>
 							<li>| jetpack_featured_media_url</li>
 						</ul>
 						
@@ -104,14 +104,16 @@
 					
 					<div class="borderDiv">
 						<label for="fname">Enter site for posts:</label>
-						<input type="text" id="fname" name="fname"><br><br>
-						<button class="difBut" id="" onclick=""> Get posts </button>
+						<input type="text" id="postSiteLink" name="postSiteLink"><br><br>
+						<button class="difBut" id="" onclick="refreshContent()"> Get posts </button>
 						<button class="infoBut" id="infoBut" onclick="myBlurFunctionTwo(1)">Info</button>
 					</div>
 					
 					<div class="slides-container">
-						<div class="post">
-							<a class="post-title" id="post-title">Post title </a>
+						<div class="post" id="thePost">
+							<div class="beforePostTitle">
+								<a class="post-title" id="post-title">Post title </a>
+							</div>
 							
 							<div class="row">
 								<div class="fit5 fltLeft blockSlide">

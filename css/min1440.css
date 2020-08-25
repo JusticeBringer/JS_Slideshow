@@ -61,7 +61,7 @@
 		padding: 0.3vw;
 		top: 50%;
 		text-align: justify;
-    	position: absolute;
+    	position: sticky;
 	}
 	.blockSlide{
 		height: 20%;
@@ -72,11 +72,11 @@
 	}
 	.fit30{
 		width: 30%;
-		padding: 0 3vw 0 3vw;
+		padding: 0;
 	}
 	.fit5{
 		width: 5%;
-		padding: 0 3vw 0 3vw;
+		padding: 0;
 	}
 
 	.post-content{
@@ -88,10 +88,48 @@
 	}
 
 	.post-date{
-		font-size: 2vw;
+		font-size: 1.5vw;
 	}
 
 	.text-banner{
 		font-size: 2vw;
+	}
+	.post-title{
+		font-size: 2.5vw;
+	}
+	.post-content {
+		font-size: 1.5vw;
+	}
+	#allContent > div:nth-child(2) > div > div:nth-child(3) > div.slides-container > div > div {
+    	padding-top: 1vw;
+	}
+	.post-image {
+		padding: 0;
+	}
+	#hide-content > p {
+		font-size: 1.5vw;
+	}
+	.post {
+		margin: 0 0 1vw 0;
+	}
+	.slideBut{
+		font-size: 1vw;
+		top: 60%;
+	}	
+	.beforePostTitle{
+		margin-bottom: 3vw;
+	}
+	.forDespreh2 {
+		font-size: 1.5vw;
+	}
+	ol.forDespre > li {
+		font-size: 1.2vw;
+	}
+	#popupTwo > ol > li:nth-child(3) > p {
+		font-size: 1.2vw;
+	}
+	.hide-button {
+		font-size: 2vw;
+		margin-left: 35%;
 	}
 }

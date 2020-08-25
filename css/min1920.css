@@ -23,6 +23,18 @@
 	/* --- Menu until here --- */
 
 	.post-title{
-		font-size: 3vw;
+		font-size: 2.5vw;
+	}
+	.post-content {
+		font-size: 1.5vw;
+	}
+	#allContent > div:nth-child(2) > div > div:nth-child(3) > div.slides-container > div > div {
+    	padding-top: 1vw;
+	}
+	.post-image {
+		padding: 0;
+	}
+	#hide-content > p {
+		font-size: 1.5vw;
 	}
 }
