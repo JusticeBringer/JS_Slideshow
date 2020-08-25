@@ -1,7 +1,7 @@
 # JS_Slideshow
 JS Slideshow for WordPress Posts
 
-Requirements can also be seen *[here](https://rtcamp.com/assignments/front-end-engineer/)*
+Requirements can also be seen **[here](https://rtcamp.com/assignments/front-end-engineer/)**
 
 ### Problem Statement
 
